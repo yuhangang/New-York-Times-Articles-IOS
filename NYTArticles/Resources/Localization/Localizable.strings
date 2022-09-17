@@ -1,0 +1,15 @@
+"retry" = "Retry";
+"popular" = "Popular";
+"search" = "Search";
+
+"search_articles" = "Search Articles";
+"most_viewed" = "Most Viewed";
+"most_shared" = "Most Shared";
+"most_emailed" = "Most Emailed";
+
+"placeholder.nothing_here_yet" = "Nothing here yet.";
+
+"error.offline.title" = "You're offline";
+"error.offline.message" = "Check your internet and try again.";
+"error.something_went_wrong" = "Something went wrong";
+"error.please_try_again_later" = "Please try again later";

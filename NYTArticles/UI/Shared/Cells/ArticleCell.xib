@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="7SC-4V-YEV" customClass="ArticleCell" customModule="NYTArticles" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KHL-k5-kMd">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="C8p-o1-oTh">
+                        <rect key="frame" x="20" y="8" width="335" height="84"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yts-ga-qik">
+                                <rect key="frame" x="0.0" y="0.0" width="335" height="39"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0h-jB-MVn">
+                                <rect key="frame" x="0.0" y="44" width="335" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="40y-hI-Ept">
+                        <rect key="frame" x="0.0" y="99" width="375" height="1"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Waa-g0-Yob"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="C8p-o1-oTh" firstAttribute="leading" secondItem="KHL-k5-kMd" secondAttribute="leading" constant="20" id="7Fv-1h-k2f"/>
+                    <constraint firstItem="C8p-o1-oTh" firstAttribute="centerY" secondItem="KHL-k5-kMd" secondAttribute="centerY" id="7et-cW-erH"/>
+                    <constraint firstAttribute="trailing" secondItem="C8p-o1-oTh" secondAttribute="trailing" constant="20" id="Im6-FX-uYM"/>
+                    <constraint firstItem="C8p-o1-oTh" firstAttribute="top" secondItem="KHL-k5-kMd" secondAttribute="top" constant="8" id="Umw-ve-SMb"/>
+                    <constraint firstAttribute="bottom" secondItem="C8p-o1-oTh" secondAttribute="bottom" constant="8" id="aeq-zQ-75Q"/>
+                    <constraint firstItem="40y-hI-Ept" firstAttribute="leading" secondItem="KHL-k5-kMd" secondAttribute="leading" id="hBj-hd-ePq"/>
+                    <constraint firstAttribute="bottom" secondItem="40y-hI-Ept" secondAttribute="bottom" id="hCs-hm-Tnk"/>
+                    <constraint firstAttribute="trailing" secondItem="40y-hI-Ept" secondAttribute="trailing" id="l37-Eb-3c3"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="375" height="80"/>
+            <connections>
+                <outlet property="subtitleLabel" destination="i0h-jB-MVn" id="IYJ-f8-hXS"/>
+                <outlet property="titleLabel" destination="yts-ga-qik" id="nfh-40-KpH"/>
+            </connections>
+            <point key="canvasLocation" x="-271.73913043478262" y="-161.38392857142856"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

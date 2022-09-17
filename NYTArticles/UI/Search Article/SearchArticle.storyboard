@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="38v-z7-rsD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search Article View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="SearchArticleViewController" customModule="NYTArticles" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="M7R-Re-gCH">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" placeholder="Type in Search text here" translatesAutoresizingMaskIntoConstraints="NO" id="GKz-jR-YOb" customClass="SearchBar" customModule="NYTArticles" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="51"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="51" id="wvX-H6-9Ew"/>
+                                        </constraints>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" systemColor="systemGray2Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </searchBar>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zau-y8-HeH">
+                                        <rect key="frame" x="0.0" y="55" width="414" height="719"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="09h-qy-iqj">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Y6W-OH-hqX" id="2Rr-0t-CNo"/>
+                                            <outlet property="delegate" destination="Y6W-OH-hqX" id="nLT-CY-wPt"/>
+                                        </connections>
+                                    </collectionView>
+                                </subviews>
+                            </stackView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No results found." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZ0-FK-VoX">
+                                <rect key="frame" x="142" y="442.5" width="130" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemGray2Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sUf-5a-Nsk" customClass="StatefulPlaceholderView" customModule="NYTArticles" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="143" width="414" height="719"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="M7R-Re-gCH" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="0Gt-dO-6Uf"/>
+                            <constraint firstItem="sUf-5a-Nsk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="5is-pN-8kQ"/>
+                            <constraint firstItem="M7R-Re-gCH" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="BpY-oK-cUy"/>
+                            <constraint firstItem="GZ0-FK-VoX" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Dkg-VS-XPL"/>
+                            <constraint firstItem="M7R-Re-gCH" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="PGT-Jp-O3J"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="sUf-5a-Nsk" secondAttribute="bottom" id="aCk-jh-44j"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sUf-5a-Nsk" secondAttribute="trailing" id="jDQ-yN-3Lf"/>
+                            <constraint firstItem="M7R-Re-gCH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="qCY-Cy-f9e"/>
+                            <constraint firstItem="GZ0-FK-VoX" firstAttribute="centerY" secondItem="Zau-y8-HeH" secondAttribute="centerY" constant="-50" id="tZO-6H-EFG"/>
+                            <constraint firstItem="sUf-5a-Nsk" firstAttribute="top" secondItem="GKz-jR-YOb" secondAttribute="bottom" constant="4" id="vQ4-Uz-dpQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wai-3s-3Fm"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Zau-y8-HeH" id="1Kc-hu-0Jp"/>
+                        <outlet property="emptyCollectionViewPlaceholderLabel" destination="GZ0-FK-VoX" id="4DX-Cq-uei"/>
+                        <outlet property="searchBar" destination="GKz-jR-YOb" id="jzB-9a-tT1"/>
+                        <outlet property="statefulPlaceholderView" destination="sUf-5a-Nsk" id="6gj-FE-mEb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="115.84821428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eux-0l-iyi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="38v-z7-rsD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1At-pg-EbH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="mRt-VX-aVh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r7B-zu-9ik" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
